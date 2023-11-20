@@ -1,0 +1,18 @@
+[package]
+name = "first_component"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = { version = "0.4.31", features = ["serde"] }
+dioxus = "0.4.0"
+dioxus-fullstack = "0.4.1"
+serde = "1.0.192"
+serde_derive = "1.0.192"
+
+[features]
+default = []
+ssr = ["dioxus-fullstack/axum"]
+web = ["dioxus-fullstack/web"]
